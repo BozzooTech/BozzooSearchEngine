@@ -29,6 +29,16 @@ The safety of our users is our absolute highest priority. The dark web is danger
 
 ---
 
+## 🤖 Autonomous Bot Management
+
+Bozzoo handles operations at a massive scale without manual administrative intervention. Our backend is entirely governed by interconnected python bots built into our async task queues:
+
+- **The Harvester Spider:** A recursive data-mining bot that accepts a seed URL and automatically rips all interconnected Tor links down the chain.
+- **The Ring Blocker:** A ruthless cyber-defense script natively integrated into the API. When an abusive domain exceeds maximum reporting thresholds, the API triggers a background Celery worker. This worker autonomously proxies into the reported scam domain, scans the page for outbound links built by the author, and permanently executes a scorched-earth purge of the entire interconnected "Scam Ring" from our database.
+- **The Health Pinger:** A 50-concurrency bulk pinger running every hour that ensures dead links are instantly dropped from search results.
+
+---
+
 ## ✨ Features
 * **Visual Transparency:** Every search result prominently displays real-time **Visitor Counts** and **Community Trust Scores**. See if a site is heavily vetted and trusted by the community *before* you expose yourself to visiting it.
 * **Lightning Fast:** Sub-10 millisecond local Redis query caching.
@@ -44,7 +54,7 @@ Bozzoo is a passion project built to clean up and modernize exploration on the T
 
 If you believe in our mission of providing a fast, scam-free, and highly accurate dark web search engine, please consider supporting our development! Your donations keep the servers running and our crawlers active.
 
-**☕ Buy Me a Coffee:** [buymeacoffee.com/bhumasai](https://www.buymeacoffee.com/your-username)
+**☕ Buy Me a Coffee:** [buymeacoffee.com/bozzoosearch](https://www.buymeacoffee.com/bozzoosearch)
 **💰 Bitcoin (BTC):** `bc1qqd7xeannn0ec8azp7xldc95q05uxfu7nlkkjzt`
 
 *(If you are an enterprise sponsor or wish to acquire a legitimate sponsored indexing slot, please use the Contact form on our platform).*
